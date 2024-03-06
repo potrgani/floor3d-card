@@ -2,7 +2,7 @@
 
 import { FormfieldBase } from '@material/mwc-formfield/mwc-formfield-base.js';
 import { styles as formfieldStyles } from '@material/mwc-formfield/mwc-formfield.css.js';
-import { customElement, property } from "lit/decorators.js";
+import { customElement } from "lit/decorators.js";
 
 @customElement("floor3d-formfield")
 export class Floor3dFormField extends FormfieldBase {

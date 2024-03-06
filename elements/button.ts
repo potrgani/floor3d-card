@@ -2,7 +2,7 @@
 
 import { ButtonBase } from '@material/mwc-button/mwc-button-base.js';
 import { styles as buttonStyles } from '@material/mwc-button/styles.css.js';
-import { customElement, property } from "lit/decorators.js";
+import { customElement } from "lit/decorators.js";
 
 @customElement("floor3d-button")
 export class Floor3dButton extends ButtonBase {

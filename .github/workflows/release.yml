@@ -6,22 +6,15 @@ on:
 
 jobs:
   release:
-    name: Prepare release
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-
+      - uses: actions/checkout@v4
       # Build
-      - name: Build the file
-        run: |
-          cd /home/runner/work/floor3d-card/floor3d-card
-          npm install
-          npm run build
-
+      - run: npm install
+      - run: npm run build
       # Upload build file to the releas as an asset.
-      - name: Upload zip to release
-        uses: svenstaro/upload-release-action@v1-release
-
+      - uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: /home/runner/work/floor3d-card/floor3d-card/dist/floor3d-card.js

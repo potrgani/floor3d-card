@@ -1,10 +1,12 @@
 import * as en from './languages/en.json';
 import * as nb from './languages/nb.json';
+import * as de from './languages/de.json';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const languages: any = {
   en: en,
   nb: nb,
+  de: de,
 };
 
 export function localize(string: string, search = '', replace = ''): string {

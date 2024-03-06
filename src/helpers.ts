@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { PropertyValues } from 'lit';
-import { HomeAssistant, LovelaceConfig } from 'custom-card-helpers';
+import { HomeAssistant } from 'custom-card-helpers';
 import { Floor3dCardConfig } from './types';
 
 /**
