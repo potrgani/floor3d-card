@@ -1,5 +1,4 @@
-{
-  "$schema": "./tsconfig",
+{ "$schema": "./tsconfig",
   "compilerOptions": {
     "target": "es2017",
     "module": "esnext",
@@ -10,16 +9,16 @@
       "dom.iterable"
     ],
     "noEmit": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "strict": true,
-    "noImplicitAny": true,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "experimentalDecorators": true
-  },
-  "include": [
-    "src/**/*.ts" // Adjust the path to match your project structure
-  ],
-  "exclude": [
-    "node_modules" // Exclude node_modules from compilation
-  ]
+    "experimentalDecorators": true,
+    "noUnusedLocals": false,
+    "strictNullChecks":false
+  }
 }
