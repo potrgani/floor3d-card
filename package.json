@@ -15,7 +15,7 @@
   "author": "Andrea Di Zanni <adizanni@msn.com>",
   "license": "MIT",
   "dependencies": {
-    "@lit-labs/scoped-registry-mixin": "^1.0.0",
+    "@lit-labs/scoped-registry-mixin": "^1.0.3",
     "@material/mwc-button": "^0.25.3",
     "@material/mwc-formfield": "^0.25.3",
     "@material/mwc-icon": "^0.25.3",
