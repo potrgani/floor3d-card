@@ -1496,7 +1496,7 @@ export class Floor3dCard extends LitElement {
       this._manageZoom();
 
       const initialLevel = typeof this._config.initialLevel === 'undefined' ? -1 : this._config.initialLevel;
-      this._setVisibleLevel(initialLevel);
+      this._setVisibleLevel(0);
 
       this._resizeCanvas();
 
