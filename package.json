@@ -20,7 +20,7 @@
     
     "@material/mwc-icon": "^0.25.3",
     "@material/mwc-icon-button": "^0.25.3",
-    "@material/mwc-list": "^0.25.3",
+    
     "@material/mwc-menu": "^0.25.3",
     "@material/mwc-notched-outline": "^0.25.3",
     "@material/mwc-ripple": "^0.25.3",
