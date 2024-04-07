@@ -66,6 +66,6 @@
     "start": "npx rollup -c rollup.config.dev.js --watch",
     "build": "npm run lint && npm run rollup",
     "lint": "npx eslint src/*.ts",
-    "rollup": "npx rollup -c"
+    "rollup": "rollup -c"
   }
 }
