@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import { LitElement, html, TemplateResult, css, PropertyValues, CSSResultGroup, render } from 'lit';
-import { customElement, state } from 'lit/decorators.js';
+import { property, customElement, state } from 'lit/decorators';
 import {
   HomeAssistant,
   ActionHandlerEvent,
@@ -3247,8 +3247,9 @@ export class Floor3dCard extends LitElement {
     return html`
       <ha-card
         tabindex="0"
-        .style=${`${this._config.style || 'overflow: hidden; width: auto; height: ' + htmlHeight + '; position: relative;'
-      }`}
+        .style=${`${
+          this._config.style || 'overflow: hidden; width: auto; height: ' + htmlHeight + '; position: relative;'
+        }`}
         id="${this._card_id}"
       >
       </ha-card>
