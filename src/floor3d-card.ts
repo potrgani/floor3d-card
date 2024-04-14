@@ -1502,6 +1502,7 @@ export class Floor3dCard extends LitElement {
       this._manageZoom();
 
       const initialLevel = typeof this._config.initialLevel === 'undefined' ? -1 : this._config.initialLevel;
+      this._setVisibleLevel(0);
       this._setVisibleLevel(1);
 
       this._resizeCanvas();
@@ -1717,7 +1718,8 @@ export class Floor3dCard extends LitElement {
   private _getLevelBar(): TemplateResult {
     if (this._levels) {
       if (this._levels.length > 1 && (this._config.hideLevelsMenu == null || this._config.hideLevelsMenu == 'no')) {
-        return html` <div class="category" style="opacity: 0.5; position: absolute;  transform: translateX(550%);">${this._getLevelIcons()}</div> `;
+       // return html` <div class="category" style="opacity: 0.5; position: absolute;  transform: translateX(550%);">${this._getLevelIcons()}</div> `;
+        return html` <div class="category" style="opacity: 0.5; position: absolute">${this._getLevelIcons()}</div> `;
       } else {
         return html``;
       }
