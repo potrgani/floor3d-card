@@ -24,6 +24,8 @@ import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Sky } from 'three/examples/jsm/objects/Sky';
 import { Object3D } from 'three';
 import '../elements/button';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
+
 
 /* eslint no-console: 0 */
 console.info(
@@ -1359,8 +1361,11 @@ export class Floor3dCard extends LitElement {
         }
         this._modeltype = ModelSource.OBJ;
       } else if (fileExt == 'glb') {
+        const dracoLoader = new DRACOLoader();
+        dracoLoader.setDecoderPath('jsm/libs/draco/gltf/');
         //glb format
         const loader = new GLTFLoader().setPath(path);
+        loader.setDRACOLoader(dracoLoader);
         loader.load(
           this._config.objfile,
           this._onLoadedGLTF3DModel.bind(this),
