@@ -1469,7 +1469,7 @@ export class Floor3dCard extends LitElement {
 
       this._controls = new OrbitControls(this._camera, this._renderer.domElement);
 
-      this._renderer.setPixelRatio(window.devicePixelRatio);
+      //this._renderer.setPixelRatio(window.devicePixelRatio);
 
       this._controls.maxPolarAngle = (0.85 * Math.PI) / 2;
       this._controls.addEventListener('change', this._changeListener);
