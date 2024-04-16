@@ -1134,7 +1134,7 @@ export class Floor3dCard extends LitElement {
     this._sky = new Sky();
     this._sky.scale.setScalar(100000);
     this._scene.add(this._sky);
-    this._scene.add(stats.dom);
+    
     const uniforms = this._sky.material.uniforms;
     uniforms['turbidity'].value = effectController.turbidity;
     uniforms['rayleigh'].value = effectController.rayleigh;
@@ -1363,7 +1363,7 @@ export class Floor3dCard extends LitElement {
         }
         this._modeltype = ModelSource.OBJ;
       } else if (fileExt == 'glb') {
-        const stats = new Stats();
+        
         const dracoLoader = new DRACOLoader();
         dracoLoader.setDecoderPath('jsm/libs/draco/gltf/');
         //glb format
