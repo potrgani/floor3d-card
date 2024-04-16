@@ -25,6 +25,7 @@ import { Sky } from 'three/examples/jsm/objects/Sky';
 import { Object3D } from 'three';
 import '../elements/button';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
+import Stats from 'three/examples/jsm/libs/stats.module.js';
 
 
 /* eslint no-console: 0 */
@@ -1133,7 +1134,7 @@ export class Floor3dCard extends LitElement {
     this._sky = new Sky();
     this._sky.scale.setScalar(100000);
     this._scene.add(this._sky);
-
+    this._scene.add(stats.dom);
     const uniforms = this._sky.material.uniforms;
     uniforms['turbidity'].value = effectController.turbidity;
     uniforms['rayleigh'].value = effectController.rayleigh;
@@ -1362,6 +1363,7 @@ export class Floor3dCard extends LitElement {
         }
         this._modeltype = ModelSource.OBJ;
       } else if (fileExt == 'glb') {
+        const stats = new Stats();
         const dracoLoader = new DRACOLoader();
         dracoLoader.setDecoderPath('jsm/libs/draco/gltf/');
         //glb format
