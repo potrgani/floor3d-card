@@ -25,7 +25,7 @@ import { Sky } from 'three/examples/jsm/objects/Sky';
 import { Object3D } from 'three';
 import '../elements/button';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
-import Stats from 'three/examples/jsm/libs/stats.module.js';
+
 
 
 /* eslint no-console: 0 */
