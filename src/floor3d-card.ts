@@ -830,10 +830,10 @@ export class Floor3dCard extends LitElement {
         this._renderer.domElement.parentElement.clientWidth / this._renderer.domElement.parentElement.clientHeight;
       this._camera.updateProjectionMatrix();
       this._renderer.setSize(
-        //window.innerWidth/2, window.innerHeight/2, false
-        this._renderer.domElement.parentElement.clientWidth,
-        this._renderer.domElement.parentElement.clientHeight,
-        !this._issidebar(),
+        window.innerWidth/2, window.innerHeight/2, false
+        //this._renderer.domElement.parentElement.clientWidth,
+        //this._renderer.domElement.parentElement.clientHeight,
+        //!this._issidebar(),
       );
       this._renderer.render(this._scene, this._camera);
     }
@@ -1721,8 +1721,8 @@ export class Floor3dCard extends LitElement {
   private _getLevelBar(): TemplateResult {
     if (this._levels) {
       if (this._levels.length > 1 && (this._config.hideLevelsMenu == null || this._config.hideLevelsMenu == 'no')) {
-        return html` <div class="category" style="opacity: 0.5; position: absolute;  transform: translateX(550%);">${this._getLevelIcons()}</div> `;
-       // return html` <div class="category" style="opacity: 0.5; position: absolute">${this._getLevelIcons()}</div> `;
+        //return html` <div class="category" style="opacity: 0.5; position: absolute;  transform: translateX(550%);">${this._getLevelIcons()}</div> `;
+       return html` <div class="category" style="opacity: 0.5; position: absolute">${this._getLevelIcons()}</div> `;
       } else {
         return html``;
       }
